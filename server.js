@@ -9,7 +9,7 @@ const app = express();
 
 app.use(bodyParser.json());
 
-mongoose.connect(MONGOURI, {useNewUrlParser: true})
+mongoose.connect(process.env.MONGOURI, {useNewUrlParser: true})
   .then(() => console.log('Connected to MongoDB'))
   .catch(err => console.log(err));
 
